@@ -25,9 +25,9 @@ Two databases will spin up, one for normal development and one dedicated for int
 ```sh
 composer install
 php bin/console lexik:jwt:generate-keypair # generate keys for jwt auth
-php bin/console d:m:m # migrate main database
-php bin/console d:m:m --env=test # migrate test database
-php bin/console h:f:l # seed alice fake data
+php bin/console d:m:m -n # migrate main database
+php bin/console d:m:m -n --env=test # migrate test database
+php bin/console h:f:l -n # seed alice fake data
 php -S localhost:8000 -t public
 ```
 
