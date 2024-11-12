@@ -8,9 +8,69 @@
         {% endblock %}
 
         {% block javascripts %}
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body hx-ext="head-support">
+
+
+
+        <nav class="navbar navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">conduit</a>
+                <ul class="nav navbar-nav pull-xs-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="editor.html">
+                            <i class="ion-compose"></i>&nbsp;New Post
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="auth.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.html">Settings</a>
+                    </li>
+                    <!--           <li class="nav-item active">
+                                <a class="nav-link" href="index.html">Home</a>
+                              </li> -->
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="home-page">
+
+            <div class="banner">
+                <div class="container">
+                    <h1 class="logo-font">conduit</h1>
+                    <p>A place to share your knowledge.</p>
+                </div>
+            </div>
+
+
+            <nav class="navbar navbar-light">
+            <div class="container">
+                <a class="navbar-brand"
+                   href="/"
+                   hx-push-url="/"
+                   hx-get="/htmx/home"
+                   hx-target="#app-body">conduit</a>
+
+                @include('components.navbar')
+            </div>
+        </nav>
+
+        <div id="app-body">
+            {% block body %}{% endblock %}
+        </div>
+
+        <footer>
+            <div class="container">
+                <a href="/" class="logo-font">conduit</a>
+                <span class="attribution">
+          An interactive learning project from <a href="https://thinkster.io">Thinkster</a>. Code & design licensed under MIT.
+        </span>
+            </div>
+        </footer>
     </body>
 </html>
