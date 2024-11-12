@@ -5,7 +5,11 @@ Symfony codebase containing real world examples (CRUD, auth, advanced patterns, 
 ## Worth Reading (Tac)
 
 * https://jolicode.com/blog/making-a-single-page-application-with-htmx-and-symfony
-* 
+* https://github.com/gothinkster/conduit-bootstrap-template/tree/master/pages
+
+Convert the above to twig
+
+
 ## [RealWorld](https://github.com/gothinkster/realworld)
 
 This codebase was created to demonstrate a fully fledged fullstack application built with Symfony including CRUD operations, authentication, routing, pagination, and more.
