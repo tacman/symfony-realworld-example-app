@@ -9,6 +9,9 @@ Symfony codebase containing real world examples (CRUD, auth, advanced patterns, 
 
 Convert the above to twig
 
+## Schema
+
+https://github.com/gothinkster/realworld/blob/main/apps/api/prisma/schema.prisma
 
 ## [RealWorld](https://github.com/gothinkster/realworld)
 

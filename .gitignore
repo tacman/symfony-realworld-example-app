@@ -38,3 +38,5 @@ coverage.xml
 /public/assets/
 /assets/vendor/
 ###< symfony/asset-mapper ###
+
+.idea
